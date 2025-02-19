@@ -10,7 +10,9 @@ interface Props {
 
 const Modal = ({ car, isOpen, close }: Props) => {
   console.log(car);
+
   return (
+    //cıkıs anımasyonu için sarmaladık
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-20 grid place-items-center backdrop-blur">

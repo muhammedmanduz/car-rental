@@ -21,7 +21,7 @@ const Hero = () => {
           kılabilirsin.{" "}
         </p>
 
-        <Button  handleClick={scroll} title="Arabaları Keşfet" designs="mt-10" />
+        <Button handleClick={scroll} title="Arabaları Keşfet" designs="mt-10" />
       </div>
 
       <div className="flex justify-center">

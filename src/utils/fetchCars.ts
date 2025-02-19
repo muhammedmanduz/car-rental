@@ -19,7 +19,7 @@ type Parameters = {
 // Asenkron fonksiyonların return tipinde doğrudan fonksiyonun return ettiği veriyi yazamayız. Fonksiyonların hata döndürme ihtimalinide göze alarak ts'in içerisinde bulunan Promise tipine return verimiz generic olarak gönderilmeli
 export const fetchCars = async ({
   limit,
-  make = "BMW",
+  make = "bmw",
   model = "",
   fuel_type = "",
   year = "",
@@ -31,11 +31,10 @@ export const fetchCars = async ({
 
     const data = await res.json();
 
- console.log(data)
+    console.log(data);
 
     //diğer sayfalarda kullanmak için return
     return data;
-
   } catch (error) {
     throw new Error("Verileri alırken sorun oluştu");
   }

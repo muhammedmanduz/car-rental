@@ -8,6 +8,7 @@ const SelectFilter = () => {
 
   const fuel = params.get("fuel_type");
 
+  //default yakıt verisi
   const selected = !fuel ? fuels[0] : fuels.find((i) => i.value === fuel);
 
   return (

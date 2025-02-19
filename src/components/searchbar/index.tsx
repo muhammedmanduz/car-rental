@@ -3,11 +3,10 @@ import { makes } from "../../utils/constants";
 import { FormEvent, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-
 const SearchBar = () => {
   const [params, setParams] = useSearchParams();
-  const [make, setMake] = useState<string>(params.get("make")|| "");
-  const [model, setModel] = useState<string>(params.get("make")|| "");
+  const [make, setMake] = useState<string>(params.get("make") || "");
+  const [model, setModel] = useState<string>(params.get("make") || "");
 
   //string dizisini nesne dizisine çevirdik(her render sırasında gereksiz hesaplamanın önüne gectik)
   const options = useMemo(

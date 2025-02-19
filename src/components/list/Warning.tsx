@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
-type Props={
-    children:string| JSX.Element;
-}
-//HOCre
-const Warning = ({children}:Props) => {
-  return (
-    <div>{children}</div>
-  )
-}
+type Props = {
+  children: string | JSX.Element;
+};
+//HOC
+const Warning = ({ children }: Props) => {
+  return <p className="home__error-container">{children}</p>;
+};
 
-export default Warning
+export default Warning;

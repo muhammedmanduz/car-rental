@@ -17,19 +17,19 @@ const Card = ({ car }: Props) => {
   const handleOpen = () => {
     setIsOpen(true);
 
-    document.body.style.overflow="hidden";//scrollama gizle
+    document.body.style.overflow = "hidden"; // arkaplanda scrollama gizle
   };
 
   const handleClose = () => {
     setIsOpen(false);
-    document.body.style.overflow="auto";
-  }
+    document.body.style.overflow = "auto";
+  };
 
   return (
     <motion.div
-      initial={{ scale: 0.5, opacity: 0 }}//başlangıc
-      whileInView={{ scale: 1, opacity: 1 }}//ekrana geldiği zaman 
-      className="car-card group"
+      initial={{ scale: 0.5, opacity: 0 }} //başlangıc
+      whileInView={{ scale: 1, opacity: 1 }} //ekrana geldiği zaman
+      className="car-card group" //hover ile ilgili
     >
       {/*Araba ismi */}
       <h2 className="car-card__content-title">
@@ -39,6 +39,7 @@ const Card = ({ car }: Props) => {
       {/* Araba fiyatı*/}
       <div className="flex mt-6 text-[19px]">
         <span className="font-semibold">₺</span>
+
         {/**1500 -8500 */}
         <span className="text-[32px]">
           {Math.round(Math.random() * 7000) + 1500}
@@ -48,7 +49,10 @@ const Card = ({ car }: Props) => {
 
       {/**Resim alanı */}
       <div className="w-full">
-        <img src={generateImage(car)} className="w-full h-full object-contain" />
+        <img
+          src={generateImage(car)}
+          className="w-full h-full object-contain"
+        />
       </div>
 
       {/* alt kısım */}
@@ -57,6 +61,7 @@ const Card = ({ car }: Props) => {
           <Info car={car} />
         </div>
 
+        {/* mause yi üzerine gertirdiğimiz zaman hover sırasında flex olsun */}
         <div className="mt-[4px] hidden group-hover:flex">
           <Button
             designs="w-full py-[25px] text-white"

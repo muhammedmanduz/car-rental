@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { CarType } from "../../utils/types";
 
-
 const Field = ({ img, text }: { img: string; text: string }) => {
   return (
     <motion.div
@@ -9,6 +8,7 @@ const Field = ({ img, text }: { img: string; text: string }) => {
         translateY: 50,
         opacity: 0.3,
       }}
+      //ekrana geldiği zaman
       whileInView={{
         translateY: 0,
         opacity: 1,
